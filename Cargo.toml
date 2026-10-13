@@ -1,0 +1,17 @@
+[workspace]
+resolver = "3"
+members = ["crates/app", "crates/migration"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+
+[workspace.dependencies]
+migration = { path = "crates/migration" }
+sea-orm-migration = { version = "2", default-features = false, features = ["sqlx-postgres", "runtime-tokio-rustls"] }
+besi = { git = "https://github.com/zerpto/besi", branch = "main", features = ["api", "db", "orm", "cron"] }
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+tower = { version = "0.5", features = ["util"] }

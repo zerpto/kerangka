@@ -1,0 +1,14 @@
+[package]
+name = "app"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+besi.workspace = true
+migration.workspace = true
+clap.workspace = true
+serde.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true
+tower.workspace = true
