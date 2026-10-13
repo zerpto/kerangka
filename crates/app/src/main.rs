@@ -1,5 +1,6 @@
 mod api;
 mod cmd;
+mod config;
 mod cron;
 
 use std::process::ExitCode;

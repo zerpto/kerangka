@@ -5,7 +5,7 @@ use besi::axum::http::StatusCode;
 
 use crate::api::requests::HelloPath;
 use crate::api::responses::Greeting;
-use crate::cmd::commands::hello::HelloConfig;
+use crate::config::HelloConfig;
 
 /// `GET /api/hello/{name}`: `{"message": "<greeting>, <name>!"}`.
 pub async fn hello(
